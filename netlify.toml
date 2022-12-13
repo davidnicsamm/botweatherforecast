@@ -2,6 +2,6 @@
   functions = "functions"
   command = "netlify-lambda install && mkdir ./public"
 [[redirects]]
-  from = "/api/*"
+  from = "/botweatherforecast/*"
   to = "/.netlify/functions/:splat"
   status = 200
