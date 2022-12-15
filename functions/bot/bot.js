@@ -12,10 +12,7 @@ bot.start(ctx => {
     const mensaje = "Bienvenido al pronóstico del tiempo.\n\
     Para continuar, necesitamos acceder a la ubicación de su dispositivo.\n\
     Presione Si para continuar, No para cancelar.";
-
     
-    
-
     ctx.reply(mensaje, {
         reply_markup: {
             inline_keyboard: [
