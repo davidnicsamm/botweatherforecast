@@ -51,6 +51,8 @@ bot.on('callback_query', ctx => {
     }
 })
 
+bot.launch()
+
 
 // AWS event handler syntax (https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html)
 exports.handler = async event => {
@@ -64,4 +66,3 @@ exports.handler = async event => {
 }
 
 
-bot.launch()
