@@ -12,7 +12,7 @@ bot.start(ctx => {
     const mensaje = "Bienvenido al pronóstico del tiempo.\n\
     Para continuar, necesitamos acceder a la ubicación de su dispositivo.\n\
     Presione Si para continuar, No para cancelar.";
-    
+
     ctx.reply(mensaje, {
         reply_markup: {
             inline_keyboard: [
@@ -47,8 +47,6 @@ bot.on('callback_query', ctx => {
         ctx.reply("Salir");
     }
 })
-
-bot.launch()
 
 
 // AWS event handler syntax (https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html)
