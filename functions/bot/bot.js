@@ -13,13 +13,24 @@ bot.start(ctx => {
     Para continuar, necesitamos acceder a la ubicación de su dispositivo.\n\
     Presione Si para continuar, No para cancelar.";
 
-    ctx.reply(mensaje, {
-        reply_markup: {
-            inline_keyboard: [
-                [{text: "SI", callback_data: "btn_si"}, {text: "NO", callback_data: "btn_no"}]
-            ]
-        }
-    });
+    
+    console.log("Received /start command")
+    try {
+        return ctx.reply(mensaje, {
+            reply_markup: {
+                inline_keyboard: [
+                    [{text: "SI", callback_data: "btn_si"}, {text: "NO", callback_data: "btn_no"}]
+                ]
+            }
+        });
+
+    } catch (e) {
+        console.error("error in start action:", e)
+        return ctx.reply("Error occured")
+    }
+
+
+
 });
 
 
