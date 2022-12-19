@@ -45,9 +45,9 @@ bot.on('callback_query', ctx => {
         navigator.geolocation.getCurrentPosition((success, error) => {
             if(error){
                 console.log(error);
-                ctx.reply("Error al querer consultar el pronóstico");
+                return ctx.reply("Error al querer consultar el pronóstico");
             }else{
-                ctx.reply("Ubicación: latitud: " + success.latitude + " - longitud: " + success.longitude);  
+                return ctx.reply("Ubicación: latitud: " + success.latitude + " - longitud: " + success.longitude);  
             }
 
         });
